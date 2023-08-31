@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    function max(arr) {
+        let max = arr[0]
+        for (let i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        let max2;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== max) {
+                max2 = arr[i];
+            }
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max2 && arr[i] !== max) {
+                max2 = arr[i];
+            }
+        }
+        let max3;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== max && arr[i] !== max2) {
+                max3 = arr[i];
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max3 && arr[i] !== max && arr[i] !== max2) {
+                max3 = arr[i];
+            }
+        }
+        return max3;
+    }
+
+    let array = [7, 0, 6, 5, 4, 2, 6, 4, 7]
+    console.log(max(array))
+</script>
+</html>
